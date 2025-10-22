@@ -7,10 +7,10 @@ This is a guideline and script for installing or updating Cursor on Ubuntu 24.04
 Run this command to install/update Cursor directly without cloning the repository:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/hieutt192/Cursor-ubuntu/Cursor-ubuntu24.04/manage_cursor.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/coinhole/cursor/ubuntu-24.04/manage_cursor.sh)"
 ```
 
-> **Note:** For Ubuntu 22.04 installation, please switch to the `main` branch or visit: [Link](https://github.com/coinhole/cursor/tree/ubuntu-22.04)
+> **Note:** For Ubuntu 22.04 installation, please switch to the `ubuntu-22.04` branch or visit: [Link](https://github.com/coinhole/cursor/tree/ubuntu-22.04)
 
 ---
 
