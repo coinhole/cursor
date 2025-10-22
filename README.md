@@ -1,15 +1,16 @@
+# Cursor AI IDE Installer for Ubuntu 24.04
 
+This is a guideline and script for installing or updating Cursor on Ubuntu 24.04.
 
----
 ## 🚀 Quick Start (One-Line Installation)
 
 Run this command to install/update Cursor directly without cloning the repository:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/hieutt192/Cursor-ubuntu/refs/heads/main/manage_cursor.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/hieutt192/Cursor-ubuntu/Cursor-ubuntu24.04/manage_cursor.sh)"
 ```
 
-> **Note:** For Ubuntu 24.04 installation, please switch to the `Cursor-ubuntu24.04` branch or visit: [Link](https://github.com/hieutt192/Cursor-ubuntu/tree/Cursor-ubuntu24.04)
+> **Note:** For Ubuntu 22.04 installation, please switch to the `main` branch or visit: [Link](https://github.com/hieutt192/Cursor-ubuntu/tree/main)
 
 ---
 
@@ -24,7 +25,7 @@ When you run the script, you'll see a user-friendly menu interface:
 / /___/ /_/ / /  (__  ) /_/ / /     / ___ |_/ /   _/ // /_/ / /___   
 \____/\__,_/_/  /____/\____/_/     /_/  |_/___/  /___/_____/_____/   
                                                                      
-For Ubuntu 22.04
+For Ubuntu 24.04
 -------------------------------------------------
   /\_/\
  ( o.o )
@@ -32,30 +33,33 @@ For Ubuntu 22.04
 ------------------------
 1. 💿 Install Cursor
 2. 🆙 Update Cursor
-3. 🗑️ Uninstall Cursor
+3. 🎨 Restore Icons
+4. 🗑️ Uninstall Cursor
 Note: If the menu reappears after choosing an option, check any error message above.
 ------------------------
-Please choose an option (1, 2, or 3): 
+Please choose an option (1, 2, 3, or 4): 
 ```
 
-This is a guideline and script for installing or updating Cursor on Ubuntu 22.04.
+---
 
 ## ✨ Features
 - 🚀 **One-line Installation:** Install directly from GitHub without cloning
 - 📦 **Auto-download:** Automatically fetches latest Cursor AppImage 
 - 🔄 **Easy Update:** Update to newest version with single command
+- 🎨 **Icon Restore:** Change your icon selection after installation
 - 🗑️ **Complete Uninstall:** Remove Cursor and all related files
-- 🎨 **Icon Selection:** Choose your preferred application icon
 - 🖥️ **Desktop Integration:** Automatic menu entry creation
 
+---
+
 ## ⚙️ Prerequisites
-- 🐧 Ubuntu 22.04 or compatible Linux distribution
+- 🐧 Ubuntu 24.04 or compatible Linux distribution
 - 🌐 Internet connection
 - 🔑 `sudo` privileges
 - 📦 `curl` (auto-installed if missing)
-- 📦 `libfuse2` (auto-installed if missing)
 
 ---
+
 
 ## 🎨 Available Icons
 - <img src="images/cursor-icon.png" alt="Cursor Icon" width="24"/> `cursor-icon.png` – Standard Cursor logo with blue background  
@@ -64,8 +68,8 @@ This is a guideline and script for installing or updating Cursor on Ubuntu 22.04
 ---
 
 ## ⚠️ Important Notes
-- **Ubuntu 22.04:** The script automatically installs `libfuse2` for AppImage support
-- **Ubuntu 24.04+:** Do NOT install `libfuse2` manually - it can cause graphical issues
+- **Ubuntu 24.04:** This script is specifically designed for Ubuntu 24.04
+- **Do NOT install libfuse2:** Unlike Ubuntu 22.04, libfuse2 is not needed and can cause issues
 - **Restart recommended:** For best experience, restart after installation
 - **Sudo required:** Script needs admin privileges for system-wide installation
 
@@ -75,32 +79,37 @@ This is a guideline and script for installing or updating Cursor on Ubuntu 22.04
 If you encounter any issues:
 1. **Permission errors:** Ensure you have `sudo` privileges and active internet connection
 2. **Script fails to download:** Check your network connection and try again
-3. **Cursor won't start:** The script handles `libfuse2` automatically, but you can verify with:
-   ```bash
-   sudo apt update && sudo apt install libfuse2
-   ```
+3. **Cursor won't start:** Run from terminal to see error messages: `/opt/Cursor/AppRun --no-sandbox`
 4. **Desktop entry missing:** Log out and log back in, or restart your computer
 
 ---
 
-## 📝 Version History
+## ❌ Uninstallation
 
-### 2.3 (Current) 
-**Optimized Script Interface and Enhanced User Experience:**
-- **One-line Installation:** Direct installation via curl command
-- **Uninstall Option:** Complete removal functionality in main menu
-- **Enhanced UI:** Improved menu design with emojis and better alignment
-- **Smart Auto-download:** Intelligent download with automatic fallback
-- **Simplified Desktop Integration:** Clear guidance for icon refresh without automatic commands
+The script includes a built-in uninstall option. Simply run the script and choose option 4:
 
-### 2.2 
-**Terminal Display Enhancement:** Added figlet library for ASCII art banners and improved visual experience
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/hieutt192/Cursor-ubuntu/Cursor-ubuntu24.04/manage_cursor.sh)"
+```
 
-### 2.1 
-**Ubuntu Compatibility:** Added version checking and automatic libfuse2 installation for Ubuntu 22.04
+Or if you have the script locally:
+```bash
+./manage_cursor.sh
+```
 
-### 2.0 
-**Auto-download System:** Implemented automatic Cursor AppImage fetching with manual fallback option
+Select **4. 🗑️ Uninstall Cursor** from the menu for complete removal.
 
-### 1.0 
-**Initial Release:** Basic installation and update functionality with manual AppImage path
+---
+
+## 🆕 New Feature Release
+
+### Latest Features (Current Version)
+**Enhanced Script Interface and User Experience:**
+- **🚀 One-line Installation:** Direct installation via curl command without cloning repository
+- **🗑️ Uninstall Option:** Complete removal functionality built into main menu
+- **🎨 Icon Restore:** Change your icon selection after installation with dedicated option
+- **📦 Smart Auto-download:** Intelligent download with automatic fallback to manual input
+- **🖥️ Desktop Integration:** Automatic menu entry creation and proper permissions
+- **💻 Ubuntu 24.04 Optimized:** Specifically designed for Ubuntu 24.04 without libfuse2 dependency
+- **🎭 Beautiful UI:** ASCII art banner with figlet and friendly cat mascot
+- **🔧 Comprehensive Management:** Install, Update, Restore Icons, and Uninstall all in one script
